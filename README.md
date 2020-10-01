@@ -20,11 +20,14 @@ This repo is for the data in brief data article that describes the healthcare fa
 
 ![Nigerian states population estimate from 2016 to 2017](Charts/Population_estimates_per_state.png)
 
-![Healthcare facilities available for each state in Nigeria](Charts/Healthcare_facilities.png")
+
+![Healthcare facilities available for each state in Nigeria](Charts/Healthcare_facilities.png)
+
 
 ## COVID-19 data analytics
 
-![COVID-19 cases by geopolitical zones and Nigeria 2020 population estimate at mid year by the UN](Charts/COVID-19_by_geopolitical_zones.png")
+![COVID-19 cases by geopolitical zones and Nigeria 2020 population estimate at mid year by the UN](Charts/COVID-19_by_geopolitical_zones.png)
+
 
 ![Daily confirmed cases of COVID-19 in Nigeria](Charts/Daily_confirmed_cases.png)
 
@@ -44,7 +47,7 @@ This repo is for the data in brief data article that describes the healthcare fa
 ![36 States of Nigeria reduced 2020 budget due to COVID-19 Pandemic](Charts/Initial_and_revised_budget.png)
 
 
-![Initial budget by geopolitical zones in Nigeria](Charts/budgetbygeo.png")
+![Initial budget by geopolitical zones in Nigeria](Charts/budgetbygeo.png)
 
 
 ## NCDC Twitter timelines
