@@ -46,9 +46,9 @@ This repo is for the data in brief data article that describes the healthcare fa
 
 ![36 States of Nigeria reduced 2020 budget due to COVID-19 Pandemic](Charts/Initial_and_revised_budget.png)
 
+![Initial budget by geopolitical zones in Nigeria](Charts/Budget_reduction_rate.png.png)
 
 ![Initial budget by geopolitical zones in Nigeria](Charts/budgetbygeo.png)
-
 
 ## NCDC Twitter timelines
 
