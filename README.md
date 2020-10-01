@@ -61,6 +61,6 @@ This repo is for the data in brief data article that describes the healthcare fa
 <img src="Charts/NCDC_daily_tweets.png">
 <br>
 
-<img src="Word_cloud_of_NCDC_tweet.png">
+<img src="Charts/Word_cloud_of_NCDC_tweet.png">
 <br>
 
