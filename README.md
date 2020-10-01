@@ -14,53 +14,42 @@ This repo is for the data in brief data article that describes the healthcare fa
 
 - NCDC Twitter timelines
 
+---
 
 ## Nigeria population estimate and healthcare facilities
 
-<img src="Charts/Population_estimates_per_state.png">
-<br>
+![Nigerian states population estimate from 2016 to 2017](Charts/Population_estimates_per_state.png)
 
-<img src="Charts/Healthcare_facilities.png">
-<br>
+![Healthcare facilities available for each state in Nigeria](Charts/Healthcare_facilities.png")
 
 ## COVID-19 data analytics
 
-<img src="Charts/COVID-19_by_geopolitical_zones.png">
-<br>
+![COVID-19 cases by geopolitical zones and Nigeria 2020 population estimate at mid year by the UN](Charts/COVID-19_by_geopolitical_zones.png")
 
-<img src="Charts/Daily_confirmed_cases.png">
-<br>
+![Daily confirmed cases of COVID-19 in Nigeria](Charts/Daily_confirmed_cases.png)
 
-<img src="Charts/Daily_recovered_cases.png">
-<br>
+![Daily recovered cases of COVID-19 in Nigeria](Charts/Daily_recovered_cases.png)
 
-<img src="Charts/Daily_death_cases.png">
-<br>
+![Daily death cases of COVID-19 in Nigeria](Charts/Daily_death_cases.png)
 
 ## COVID-19 testing laboratories
 
-<img src="Charts/Covid_19_lab_by_state.png">
-<br>
+![Government laboratories for testing COVID-19](Charts/Covid_19_lab_by_state.png)
 
 
-<img src="Charts/COVID-19_lab_by_ownership.png">
-<br>
+![General COVID-19 testing laboratories](Charts/COVID-19_lab_by_ownership.png)
 
 ## Budget analysis in 2020
 
-<img src="Charts/Initial_and_revised_budget.png">
-<br>
+![36 States of Nigeria reduced 2020 budget due to COVID-19 Pandemic](Charts/Initial_and_revised_budget.png)
 
 
-<img src="Charts/budgetbygeo.png">
-<br>
+![Initial budget by geopolitical zones in Nigeria](Charts/budgetbygeo.png")
 
 
 ## NCDC Twitter timelines
 
-<img src="Charts/NCDC_daily_tweets.png">
-<br>
+![The NCDC daily tweets and retweets](Charts/NCDC_daily_tweets.png)
 
-<img src="Charts/Word_cloud_of_NCDC_tweet.png">
-<br>
+![Word cloud of NCDC tweets from December 2019 to September 2020](Charts/Word_cloud_of_NCDC_tweet.png)
 
