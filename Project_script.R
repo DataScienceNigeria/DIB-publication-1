@@ -1,9 +1,16 @@
 # Load packages
 
-install.load::install_load(c("tidyverse", "janitor", "inspectdf", "scales", "RColorBrewer", "mdthemes","readxl", "ggchicklet", "xts", "rtweet", "lubridate"))
+textmining <- c("rtweet", "tidytext","topicmodels", "quanteda", "tm", "quanteda", "stm", "janeaustenr", "gutenbergr", "wordcloud", "wordcloud2", "SnowballC", "textstem", "textshape", "lexicon", "textclean")
 
+formating <- c("RColorBrewer", "mdthemes")
+
+data_mining <- c("tidyverse", "readxl", "widyr", "lubridate", "stringr", "janitor", "inspectdf", "scales", "readxl", "ggchicklet", "xts", "anytime")
+
+
+install.load::install_load(c(textmining, formating, data_mining))
 
 theme_set(theme_bw())
+
 
 # Import data
 
@@ -107,8 +114,14 @@ ncdc_tweets_clean <- ncdc_tweets %>%
 
 ncdc_tweets_clean <- ncdc_tweets_clean %>% mutate(tweet = str_remove_all(tweet, "&amp;|&lt;|&gt;"), tweet = str_replace_all(tweet, "http.*",""))
 
+## COVID-19 as of September 29,2020
 
 ncdc_COVID_19_tweets <- ncdc_tweets_clean %>% filter(Date>= ymd("2019-12-01"))
+
+## Tweets data were saved and now imported
+
+ncdc_COVID_19_tweets <- read_excel("COVID-19 and economic data in Nigeria for publication as of September 29, 2020.xlsx", sheet = 5, .name_repair = make_clean_names) %>% clean_names() %>% mutate(date = anytime::anytime(date))
+
 
 ## Line plot of NCDC tweets
 
@@ -150,3 +163,15 @@ ncdc_tweets_token <- ncdc_tweets_token %>%
 ncdc_tweets_token %>%
   count(tweets) %>%
   with(wordcloud(tweets, n, min.freq = 5,           max.words= 100, random.order= FALSE, rot.per = 0.35, colors=brewer.pal(8, "Dark2")))
+
+## Word variant in NCDC tweet according to COVID-19 phases
+
+ncdc_tweets_variant <- ncdc_tweets_token  %>% mutate(date = as_date(date), time_period = factor(
+  case_when(
+  date <= ymd("2020-3-29") ~ "Pre-lockdown", between(date, ymd("2020-3-30"), ymd("2020-05-4")) ~ "Lockdown",
+  TRUE ~ "Easing"), levels = c ("Pre-lockdown", "Lockdown", "Easing")))
+
+ncdc_tweets_variant %>% group_by(time_period) %>% count(tweets, sort = TRUE) %>%
+  top_n(15) %>% ungroup() %>% 
+  ggplot(aes(x  = reorder_within( tweets, n, time_period), y = n, fill = time_period)) + geom_col(show.legend = FALSE) + facet_wrap(~time_period, scales = "free") + scale_x_reordered() + coord_flip() + 
+  labs(y = "Frequency of words", x = NULL, title = NULL)+ theme(axis.text.y = element_text(face = "bold"))
