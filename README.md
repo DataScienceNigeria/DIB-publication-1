@@ -1,4 +1,4 @@
-# An-Exploratory-Assessment-of-a-Multidimensional-Healthcare-and-Economic-Data-on-COVID-19-in-Nigeria
+# An Exploratory Assessment of a Multidimensional Healthcare and Economic Data on COVID-19 in Nigeria
 
 This repo is for the data in brief data article titled "An exploratory assessment of a multidimensional healthcare and economic data on COVID-19 in Nigeria" and can be found via <https://cutt.ly/ngx3xMw>. The dataset describes the healthcare facilities, state budget, and laboratories in Nigeria in response to the COVID-19 pandemic and the economic situation of the entire population of the country amidst the pandemic.
 
