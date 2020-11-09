@@ -1,6 +1,7 @@
 # An-Exploratory-Assessment-of-a-Multidimensional-Healthcare-and-Economic-Data-on-COVID-19-in-Nigeria
 
-This repo is for the data in brief data article that describes the healthcare facilities, state budget, and laboratories in Nigeria in response to the COVID-19 pandemic and the economic situation of the entire population of the country amidst the pandemic.
+This repo is for the data in brief data article titled "An exploratory assessment of a multidimensional healthcare and economic data on COVID-19 in Nigeria" and can be found via <https://cutt.ly/ngx3xMw>. The dataset describes the healthcare facilities, state budget, and laboratories in Nigeria in response to the COVID-19 pandemic and the economic situation of the entire population of the country amidst the pandemic.
+
 
 ## Highlight
 
@@ -56,3 +57,4 @@ This repo is for the data in brief data article that describes the healthcare fa
 
 ![Word cloud of NCDC tweets from December 2019 to September 2020](Charts/Word_cloud_of_NCDC_tweet.png)
 
+![Top 15 words found in NCDC tweets at different COVID-19 phases](Charts/Top_15_words_found_in_NCDC_tweets.png)
