@@ -14,7 +14,7 @@ theme_set(theme_bw())
 
 # Import data
 
-covid_sheet1 <- read_excel("COVID-19 and economic data in Nigeria for publication as of September 29, 2020.xlsx", skip = 1, .name_repair = make_clean_names)
+  covid_sheet1 <- read_excel("Data/COVID-19 and economic data in Nigeria vs2.xlsx", skip = 1, .name_repair = make_clean_names)
 
 covid_lab <- covid_sheet1 %>% select(state, geo_political_zone, covid_19_lab) %>% drop_na() 
 
@@ -83,7 +83,7 @@ ggsave(filename = "Charts/COVID-19 lab by ownership.png", width = 6.26, height =
 
 # Time series trend analysis
 
-covid_sheet2 <- read_excel("COVID-19 and economic data in Nigeria for publication as of September 29, 2020.xlsx", sheet = 2, .name_repair = make_clean_names) %>% clean_names() %>% mutate(date = anytime::anydate(date))
+covid_sheet2 <- read_excel("Data/COVID-19 and economic data in Nigeria vs2.xlsx", sheet = 2, .name_repair = make_clean_names) %>% clean_names() %>% mutate(date = anytime::anydate(date))
 
 covid_time_series <- covid_sheet2[, -1] # remove date column
 
@@ -120,7 +120,7 @@ ncdc_COVID_19_tweets <- ncdc_tweets_clean %>% filter(Date>= ymd("2019-12-01"))
 
 ## Tweets data were saved and now imported
 
-ncdc_COVID_19_tweets <- read_excel("COVID-19 and economic data in Nigeria for publication as of September 29, 2020.xlsx", sheet = 5, .name_repair = make_clean_names) %>% clean_names() %>% mutate(date = anytime::anytime(date))
+ncdc_COVID_19_tweets <- read_excel("Data/COVID-19 and economic data in Nigeria vs2.xlsx", sheet = 5, .name_repair = make_clean_names) %>% clean_names() %>% mutate(date = anytime::anytime(date))
 
 
 ## Line plot of NCDC tweets

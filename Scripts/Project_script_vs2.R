@@ -14,7 +14,7 @@ theme_set(theme_bw())
 
 # Import data
 
-covid_sheet1 <- read_excel("COVID-19 and economic data in Nigeria vs2.xlsx", skip = 1, .name_repair = make_clean_names)
+covid_sheet1 <- read_excel("Data/COVID-19 and economic data in Nigeria vs3.xlsx", skip = 1, .name_repair = make_clean_names)
 
 covid_lab <- covid_sheet1 %>% 
   select(states, geopolitical_zones, covid_19_lab) %>%   drop_na() 
@@ -61,7 +61,7 @@ ggsave(filename = "Charts/budgetbygeo.png", width = 6.26, height = 4.48)
 
 init_rev_budget <- covid_sheet1 %>% 
   select(states, initial = x2020_initial_budget_bn_presented, revised= x2020_revised_budget_bn_due_to_covid_19) %>% 
-  mutate(revised = -revised) %>% pivot_longer(cols = 2: 3, names_to = "time", values_to = "budget") %>% mutate(states = factor(states, levels = rev(unique(states))), time = fct_relevel(time, "revised")) %>% 
+  mutate(revised = -revised) %>% pivot_longer(cols = 2:3, names_to = "time", values_to = "budget") %>% mutate(states = factor(states, levels = rev(unique(states))), time = fct_relevel(time, "revised")) %>% 
   mutate(budget2 = abs(budget)) 
 
 init_rev_budget %>% 
@@ -106,7 +106,7 @@ ggsave(filename = "Charts/COVID-19 lab by ownership.png", width = 6.26, height =
 
 # Time series trend analysis
 
-covid_sheet2 <- read_excel("COVID-19 and economic data in Nigeria vs2.xlsx", sheet = 2, .name_repair = make_clean_names) %>% clean_names() %>% mutate(date = anytime::anydate(date))
+covid_sheet2 <- read_excel("Data/COVID-19 and economic data in Nigeria vs3.xlsx", sheet = 2, .name_repair = make_clean_names) %>% clean_names() %>% mutate(date = anytime::anydate(date))
 
 covid_time_series <- covid_sheet2[, -1] # remove date column
 
@@ -153,11 +153,11 @@ ncdc_tweets_variant <- ncdc_COVID_19_tweets  %>%
 
 ## Tweets data were saved 
 ncdc_tweets_variant %>% 
-  writexl::write_xlsx("COVID-19 and economic data in Nigeria vs2.xlsx")
+  writexl::write_xlsx("Data/COVID-19 and economic data in Nigeria vs3.xlsx")
 
 ## Tweets data were saved and now imported
 
-ncdc_COVID_19_tweets <- read_excel("COVID-19 and economic data in Nigeria vs2.xlsx", sheet = 5, .name_repair = make_clean_names) %>% clean_names() %>% mutate(date = anytime::anytime(date), covid19_time_period =
+ncdc_COVID_19_tweets <- read_excel("Data/COVID-19 and economic data in Nigeria vs3.xlsx", sheet = 5, .name_repair = make_clean_names) %>% clean_names() %>% mutate(date = anytime::anytime(date), covid19_time_period =
   fct_relevel(covid19_time_period, "Pre-lockdown", "Lockdown", "Easing"))
 
 
